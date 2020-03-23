@@ -1,5 +1,9 @@
 # bntg
 
+Kaldi如何统计data数据集
+
+https://www.cnblogs.com/JarvanWang/p/9152628.html
+
 ## 1. make dir
 
 mkdir /data/ac1zy/kaldi/egs1/torgo/s9
@@ -17,5 +21,11 @@ ln -s /fastdata/ac1zy/kaldi/egs1/torgo/s9/data /fastdata/ac1zy/kaldi/egs1/torgo/
 ### 2) copy files from other folders
 
 scp -r ../s8/conf ../s8/local ../s8/*.sh .
+
 scp -r ../s8/data/all ../s8/data/lang* data/
+
+### in Terminal
+for x in torgo_d*/data/*/Session*/wav_*; do
+do echo $x
+
 
