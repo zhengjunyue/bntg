@@ -39,3 +39,11 @@ vim data/2/spk2gender # delete M05
 
 local/prepare_torgo_1_2.sh data
 
+### 3) Prepare data
+
+/data/ac1zy/jupyter/5-fold_CV.ipynb
+## 2. Submit jobs
+
+ for fd in fd1 fd2 fd3 fd4 fd5; do qsub -V -e qsub${fd} -o qsub${fd} -j y ./run_sd.sh --stage 5 --fd ${fd}
+
+
