@@ -17,4 +17,5 @@ ln -s /fastdata/ac1zy/kaldi/egs1/torgo/s9/data /fastdata/ac1zy/kaldi/egs1/torgo/
 ### 2) copy files from other folders
 
 scp -r ../s8/conf ../s8/local ../s8/*.sh .
+scp -r ../s8/data/all ../s8/data/lang* data/
 
