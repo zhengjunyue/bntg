@@ -25,7 +25,17 @@ scp -r ../s8/conf ../s8/local ../s8/*.sh .
 scp -r ../s8/data/all ../s8/data/lang* data/
 
 ### in Terminal
-for x in torgo_d*/data/*/Session*/wav_*; do
-do echo $x
 
+for x in /shared/spandh1/Shared/data/TORGO/torgo_d*/data/*/Session*/wav_*; do
+do echo $x; ls $x | wc -w; done
+
+mkdir data/1 data/2
+
+scp -r data/all/spk2gender data/1
+
+scp -r data/all/spk2gender data/2
+
+vim data/2/spk2gender # delete M05
+
+local/prepare_torgo_1_2.sh data
 
