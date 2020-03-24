@@ -60,7 +60,11 @@ local/prepare_torgo_1_2.sh data
  
  python chang_spk.py cfg/s9/fd1_sp_bn20.cfg s8 s9
  
+ mkdir result_tg/s9
  
+ 
+
+
  
  
 
