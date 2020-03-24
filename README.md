@@ -44,6 +44,21 @@ local/prepare_torgo_1_2.sh data
 /data/ac1zy/jupyter/5-fold_CV.ipynb
 ## 2. Submit jobs
 
- for fd in fd1 fd2 fd3 fd4 fd5; do qsub -V -e qsub${fd} -o qsub${fd} -j y ./run_sd.sh --stage 5 --fd ${fd}
-
+ for fd in fd1 fd2 fd3 fd4 fd5; do qsub -V -e qsub${fd} -o qsub${fd} -j y ./run_sd.sh --stage 5 --fd ${fd}; done
+ 
+ for fd in fd1 fd2 fd3 fd4 fd5; do mkdir exp/${fd}/train/tri3b_cleaned/decode_tg; cp exp/${fd}/train/tri3b_cleaned/trans* exp/${fd}/train/tri3b_cleaned/decode_tg; done
+ 
+ for fd in fd1 fd2 fd3 fd4 fd5; do qsub -V -o qsub${fd}fmllr -e qsub${fd}fmllr -j y ./fmllr.sh --fd ${fd}; done
+ 
+ ## 3. Pytorch kaldi
+ 
+ cd /data/ac1zy/pytorch-kaldi
+ 
+ mkdir /fastdata/ac1zy/exp/pykaldi_ae/exp/s9
+ 
+ ln -s /fastdata/ac1zy/exp/pykaldi_ae/exp/s9 exp
+ 
+ python chang_spk.py cfg/s9/fd1_sp_bn20.cfg s8 s9
+ 
+ 
 
