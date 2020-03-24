@@ -24,6 +24,7 @@ scp -r ../s8/conf ../s8/local ../s8/*.sh .
 
 scp -r ../s8/data/all ../s8/data/lang* data/
 
+
 ### in Terminal
 
 for x in /shared/spandh1/Shared/data/TORGO/torgo_d*/data/*/Session*/wav_*; do
@@ -61,8 +62,23 @@ local/prepare_torgo_1_2.sh data
  python chang_spk.py cfg/s9/fd1_sp_bn20.cfg s8 s9
  
  mkdir result_tg/s9
- 
- 
+
+## 3. Rescore word and sentence subsets
+fds=(fd1 fd2 fd3 fd4 fd5)
+spks=(F01 F03 F04 M01 M02 M03 M04 M05 FC01 FC02 FC03 MC01 MC02 MC03 MC04)
+testsets=(test_sentence test_word)
+spks1=(F01)
+for spk in ${spks[@]}; do
+ for fd in ${fds[@]}; do 
+for testset in ${testsets[@]}; do 
+decode_ark=/data/ac1zy/pytorch-kaldi/exp/s9/${fd}_${feat}/decode_${fd}_${spk}_test_lm200_out_dnn2
+data=data/${fd}/${spk}/${testset}
+graphdir=exp/${fd}/train/tri3b_cleaned/graph_test_lm200
+mkdir ${decode_ark}/${testset}
+cp ${decode_ark}/lat.1.gz  ${decode_ark}/lat.2.gz ${decode_ark}/${testset}
+dir=${decode_ark}/${testset}
+local/score.sh --cmd "run.pl" $data $graphdir $dir; done; done; done
+
 
 
  
