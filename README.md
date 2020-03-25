@@ -67,7 +67,7 @@ local/prepare_torgo_1_2.sh data
 fds=(fd1 fd2 fd3 fd4 fd5)
 spks=(F01 F03 F04 M01 M02 M03 M04 M05 FC01 FC02 FC03 MC01 MC02 MC03 MC04)
 testsets=(test_sentence test_word)
-spks1=(F01)
+feat=sp_bn20
 for spk in ${spks[@]}; do
  for fd in ${fds[@]}; do 
 for testset in ${testsets[@]}; do 
