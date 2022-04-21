@@ -1,4 +1,4 @@
-# Continuous dysarthric speech recognition (ACDSR) 
+# Autoencoder bottleneck features with multi-task optimisation for improved continuous dysarthric speech recognition
 
 Copyright 2022 Zhengjun Yue, Heidi Christensen, Jon Barker
 
