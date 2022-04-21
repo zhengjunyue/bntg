@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 1792 440" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>blockdiag {
+0 [label="concatenate",shape = roundedbox];
+1 [label="ema",shape = circle];
+2 [label="fmllr",shape = circle];
+3 [label="MLP_layers_first",shape = box];
+4 [label="liGRU_layers",shape = box];
+5 [label="MLP_layers_second",shape = box];
+6 [label="MLP_soft1",shape = box];
+7 [label="MLP_soft2",shape = box];
+8 [label="cost_nll",shape = roundedbox];
+9 [label="lab_mono",shape = roundedbox];
+10 [label="mult_constant",shape = roundedbox];
+11 [label="cost_nll",shape = roundedbox];
+12 [label="lab_cd",shape = roundedbox];
+13 [label="sum",shape = roundedbox];
+1 -&gt; 0 [label = "ema"]
+2 -&gt; 0 [label = "fmllr"]
+9 -&gt; 8 [label = "lab_mono"]
+12 -&gt; 11 [label = "lab_cd"]
+0 -&gt; 3 [label = "concat"]
+8 -&gt; 10 [label = "loss_mono"]
+11 -&gt; 13 [label = "loss_cd"]
+3 -&gt; 4 [label = "out_dnn1"]
+10 -&gt; 13 [label = "loss_mono_w"]
+4 -&gt; 5 [label = "out_dnn2"]
+5 -&gt; 6 [label = "out_dnn3"]
+5 -&gt; 7 [label = "out_dnn3"]
+6 -&gt; 11 [label = "out_dnn4"]
+7 -&gt; 8 [label = "out_dnn5"]
+}</desc>
+  <path d="M 267 46 L 379 46 A8,8 0 0 1 387 54 L 387 78 A8,8 0 0 1 379 86 L 267 86 A8,8 0 0 1 259 78 L 259 54 A8,8 0 0 1 267 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <ellipse cx="131" cy="66" fill="rgb(0,0,0)" rx="24.0" ry="24.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <ellipse cx="131" cy="226" fill="rgb(0,0,0)" rx="24.0" ry="24.0" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="451" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="643" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="835" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="1027" y="46" />
+  <rect fill="rgb(0,0,0)" height="40" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="1027" y="126" />
+  <path d="M 1227 126 L 1339 126 A8,8 0 0 1 1347 134 L 1347 158 A8,8 0 0 1 1339 166 L 1227 166 A8,8 0 0 1 1219 158 L 1219 134 A8,8 0 0 1 1227 126" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 75 286 L 187 286 A8,8 0 0 1 195 294 L 195 318 A8,8 0 0 1 187 326 L 75 326 A8,8 0 0 1 67 318 L 67 294 A8,8 0 0 1 75 286" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 1419 126 L 1531 126 A8,8 0 0 1 1539 134 L 1539 158 A8,8 0 0 1 1531 166 L 1419 166 A8,8 0 0 1 1411 158 L 1411 134 A8,8 0 0 1 1419 126" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 1227 46 L 1339 46 A8,8 0 0 1 1347 54 L 1347 78 A8,8 0 0 1 1339 86 L 1227 86 A8,8 0 0 1 1219 78 L 1219 54 A8,8 0 0 1 1227 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 75 366 L 187 366 A8,8 0 0 1 195 374 L 195 398 A8,8 0 0 1 187 406 L 75 406 A8,8 0 0 1 67 398 L 67 374 A8,8 0 0 1 75 366" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 1611 46 L 1723 46 A8,8 0 0 1 1731 54 L 1731 78 A8,8 0 0 1 1723 86 L 1611 86 A8,8 0 0 1 1603 78 L 1603 54 A8,8 0 0 1 1611 46" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" />
+  <path d="M 264 40 L 376 40 A8,8 0 0 1 384 48 L 384 72 A8,8 0 0 1 376 80 L 264 80 A8,8 0 0 1 256 72 L 256 48 A8,8 0 0 1 264 40" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="66" x="320.0" y="66">concatenate</text>
+  <ellipse cx="128" cy="60" fill="rgb(255,255,255)" rx="24.0" ry="24.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="128.0" y="66">ema</text>
+  <ellipse cx="128" cy="220" fill="rgb(255,255,255)" rx="24.0" ry="24.0" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="30" x="128.0" y="226">fmllr</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="448" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="96" x="512.0" y="66">MLP_layers_first</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="640" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="72" x="704.0" y="66">liGRU_layers</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="832" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="102" x="896.0" y="66">MLP_layers_second</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="1024" y="40" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="1088.0" y="66">MLP_soft1</text>
+  <rect fill="rgb(255,255,255)" height="40" stroke="rgb(0,0,0)" width="128" x="1024" y="120" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="54" x="1088.0" y="146">MLP_soft2</text>
+  <path d="M 1224 120 L 1336 120 A8,8 0 0 1 1344 128 L 1344 152 A8,8 0 0 1 1336 160 L 1224 160 A8,8 0 0 1 1216 152 L 1216 128 A8,8 0 0 1 1224 120" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1280.0" y="146">cost_nll</text>
+  <path d="M 72 280 L 184 280 A8,8 0 0 1 192 288 L 192 312 A8,8 0 0 1 184 320 L 72 320 A8,8 0 0 1 64 312 L 64 288 A8,8 0 0 1 72 280" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="128.0" y="306">lab_mono</text>
+  <path d="M 1416 120 L 1528 120 A8,8 0 0 1 1536 128 L 1536 152 A8,8 0 0 1 1528 160 L 1416 160 A8,8 0 0 1 1408 152 L 1408 128 A8,8 0 0 1 1416 120" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="78" x="1472.0" y="146">mult_constant</text>
+  <path d="M 1224 40 L 1336 40 A8,8 0 0 1 1344 48 L 1344 72 A8,8 0 0 1 1336 80 L 1224 80 A8,8 0 0 1 1216 72 L 1216 48 A8,8 0 0 1 1224 40" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1280.0" y="66">cost_nll</text>
+  <path d="M 72 360 L 184 360 A8,8 0 0 1 192 368 L 192 392 A8,8 0 0 1 184 400 L 72 400 A8,8 0 0 1 64 392 L 64 368 A8,8 0 0 1 72 360" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="36" x="128.0" y="386">lab_cd</text>
+  <path d="M 1608 40 L 1720 40 A8,8 0 0 1 1728 48 L 1728 72 A8,8 0 0 1 1720 80 L 1608 80 A8,8 0 0 1 1600 72 L 1600 48 A8,8 0 0 1 1608 40" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="1664.0" y="66">sum</text>
+  <path d="M 384 60 L 440 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="447,60 440,56 440,64 447,60" stroke="rgb(0,0,0)" />
+  <path d="M 152 60 L 248 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,60 248,56 248,64 255,60" stroke="rgb(0,0,0)" />
+  <path d="M 152 220 L 240 220" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 240 220 L 240 60" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 240 60 L 248 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="255,60 248,56 248,64 255,60" stroke="rgb(0,0,0)" />
+  <path d="M 576 60 L 632 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="639,60 632,56 632,64 639,60" stroke="rgb(0,0,0)" />
+  <path d="M 768 60 L 824 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="831,60 824,56 824,64 831,60" stroke="rgb(0,0,0)" />
+  <path d="M 960 60 L 1016 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1023,60 1016,56 1016,64 1023,60" stroke="rgb(0,0,0)" />
+  <path d="M 960 60 L 992 60" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 992 60 L 992 140" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 992 140 L 1016 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1023,140 1016,136 1016,144 1023,140" stroke="rgb(0,0,0)" />
+  <path d="M 1152 60 L 1208 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1215,60 1208,56 1208,64 1215,60" stroke="rgb(0,0,0)" />
+  <path d="M 1152 140 L 1196.0 140" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1196.0 140.0 A4.0,4.0 0 0 1 1204.0 140.0" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1204.0 140 L 1208 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1215,140 1208,136 1208,144 1215,140" stroke="rgb(0,0,0)" />
+  <path d="M 1344 140 L 1400 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1407,140 1400,136 1400,144 1407,140" stroke="rgb(0,0,0)" />
+  <path d="M 192 300 L 1200 300" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1200 300 L 1200 140" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1200 140 L 1208 140" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1215,140 1208,136 1208,144 1215,140" stroke="rgb(0,0,0)" />
+  <path d="M 1536 140 L 1584 140" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1584 140 L 1584 60" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1584 60 L 1592 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1599,60 1592,56 1592,64 1599,60" stroke="rgb(0,0,0)" />
+  <path d="M 1344 60 L 1592 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1599,60 1592,56 1592,64 1599,60" stroke="rgb(0,0,0)" />
+  <path d="M 192 380 L 1200 380" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1200 380 L 1200 60" fill="none" stroke="rgb(0,0,0)" />
+  <path d="M 1200 60 L 1208 60" fill="none" stroke="rgb(0,0,0)" />
+  <polygon fill="rgb(0,0,0)" points="1215,60 1208,56 1208,64 1215,60" stroke="rgb(0,0,0)" />
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="52" x="390" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="36" x="416.0" y="51">concat</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="34" x="207" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="18" x="224.0" y="51">ema</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="46" x="201" y="183" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="30" x="224.0" y="196">fmllr</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="576" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="608.0" y="51">out_dnn1</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="768" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="800.0" y="51">out_dnn2</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="960" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="992.0" y="51">out_dnn3</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="960" y="118" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="992.0" y="131">out_dnn3</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="1152" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1184.0" y="51">out_dnn4</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="1152" y="118" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1184.0" y="131">out_dnn5</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="1344" y="118" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1376.0" y="131">loss ...</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="1152" y="263" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1184.0" y="276">lab_mono</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="64" x="1536" y="103" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="48" x="1568.0" y="116">loss ...</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="58" x="1443" y="38" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="42" x="1472.0" y="51">loss_cd</text>
+  <rect fill="white" height="15" stroke="rgb(0,0,0)" width="52" x="1158" y="343" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="36" x="1184.0" y="356">lab_cd</text>
+</svg>
