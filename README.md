@@ -21,7 +21,9 @@ Run the following:
 . ./parse_options.sh
 
 ```
+## Training setup
 
+Due to data scarcity, we don't have a separate test set for TORGO. In each fold, we allocated 70\% of data to training, 10\% to validation (dev) and 20\% for testing.
 
 ## Usage
 
